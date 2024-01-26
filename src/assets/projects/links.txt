@@ -1,0 +1,15 @@
+1. Calculator
+    Netlify: https://fsd-yogesh-kumar-calculator.netlify.app/
+    Github: https://github.com/Yogesh1101/Calculator.git
+
+2. Rest API Country Information
+    Netlify: https://fsd-day17-task-rest-countries.netlify.app/
+    Github: https://github.com/Yogesh1101/Rest-API-Country-Info.git
+
+3. React-Router
+    Netlify: https://fsd-day26-react-router-task.netlify.app/
+    Github: https://github.com/Yogesh1101/FSD-Day26-React-Router-Task.git
+
+4. React-Redux
+    Netlify: https://fsd-day32-react-redux-task.netlify.app/
+    Github: https://github.com/Yogesh1101/FSD-Day32-React-Redux-Task.git
