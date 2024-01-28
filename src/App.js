@@ -30,6 +30,11 @@ import { ReactComponent as JavaIcon } from "./assets/skillsIcon/java.svg";
 import { ReactComponent as ASIcon } from "./assets/skillsIcon/android-studio.svg";
 import { ReactComponent as FigmaIcon } from "./assets/skillsIcon/figma.svg";
 import Postman from "./assets/skillsIcon/postman.png";
+import Cuvette from "./assets/certificates/cuvette.png";
+import FSD from "./assets/certificates/fsd.png";
+import GI from "./assets/certificates/great-innovus.png";
+import JS from "./assets/certificates/js_hackerrank.png";
+import MS from "./assets/certificates/ms.png";
 import Education from "./components/Education";
 import ProjectTabs from "./components/ProjectTabs";
 import * as yup from "yup";
@@ -38,6 +43,21 @@ import emailjs from "@emailjs/browser";
 import { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import {
+  Autoplay,
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+} from "swiper/modules";
 
 const formValidationSchema = yup.object({
   user_name: yup.string().required("* Name field is required"),
@@ -94,6 +114,14 @@ function App() {
         />
       ),
     },
+  ];
+
+  const certificatesList = [
+    { pic: <img src={FSD} alt="FSD" /> },
+    { pic: <img src={JS} alt="JS" /> },
+    { pic: <img src={MS} alt="MS" /> },
+    { pic: <img src={Cuvette} alt="Cuvette" /> },
+    { pic: <img src={GI} alt="GI" /> },
   ];
   const [barState, setBarState] = useState({ open: false, Transition: Fade });
   const [barColor, SetBarColor] = useState("");
@@ -307,6 +335,13 @@ function App() {
                 </a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" href="#certificates">
+                  <Typography sx={{ fontSize: { xs: 15, sm: 20 } }}>
+                    Certificates
+                  </Typography>
+                </a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="#contact">
                   <Typography sx={{ fontSize: { xs: 15, sm: 20 } }}>
                     Contact
@@ -481,7 +516,7 @@ function App() {
             </Typography>
             <a
               className="text-decoration-none "
-              href="https://drive.google.com/file/d/1vWj6XBM5xO6daQ63toeeLpeReCLCmzv8/view?usp=sharing"
+              href="https://drive.google.com/file/d/1zEmE32oC28G6lXI-gA1Wu-dzxsg4GWWO/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >
@@ -653,9 +688,6 @@ function App() {
         </div>
       </section>
 
-      {/* Education Section */}
-      <Education />
-
       {/* Projects Section */}
       <section id="projects">
         <div className="container d-flex flex-column align-items-center">
@@ -677,6 +709,56 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Certificate Section */}
+      <section id="certificates">
+        <div className="container d-flex flex-column align-items-center">
+          <Typography
+            data-aos="fade-down"
+            data-aos-dutaion="1000"
+            data-aos-delay="200"
+            sx={{
+              fontSize: { xs: 20, sm: 25, md: 30, lg: 40 },
+              fontWeight: "bold",
+              color: "black",
+              marginBottom: "20px",
+            }}
+          >
+            Certificates
+          </Typography>
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            spaceBetween={30}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: true,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, EffectCoverflow, Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {certificatesList.map((certificate, index) => (
+              <SwiperSlide key={index}>{certificate.pic}</SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <Education />
 
       {/* Contact Section */}
       <section id="contact" className="d-flex justify-content-center">
@@ -878,9 +960,6 @@ function App() {
                 )}
               </div>
               <Button
-                data-aos="fade-up"
-                data-aos-dutaion="1000"
-                data-aos-delay="300"
                 disabled={formik.isSubmitting}
                 type="submit"
                 className="mt-3 mt-md-4 contact-btn"
@@ -888,22 +967,6 @@ function App() {
                 Send Message
               </Button>
             </form>
-            <Snackbar
-              anchorOrigin={{ vertical: "top", horizontal: "right" }}
-              open={barState.open}
-              TransitionComponent={barState.Transition}
-              autoHideDuration={2000}
-              onClose={handleCloseOpenBar}
-            >
-              <Alert
-                onClose={handleCloseOpenBar}
-                severity={barColor}
-                variant="filled"
-                sx={{ width: "100%" }}
-              >
-                {barMsg}
-              </Alert>
-            </Snackbar>
           </div>
         </div>
       </section>
@@ -921,6 +984,24 @@ function App() {
           </Typography>
         </div>
       </footer>
+
+      {/* SnackBar Section */}
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        open={barState.open}
+        TransitionComponent={barState.Transition}
+        autoHideDuration={2000}
+        onClose={handleCloseOpenBar}
+      >
+        <Alert
+          onClose={handleCloseOpenBar}
+          severity={barColor}
+          variant="filled"
+          sx={{ width: "100%" }}
+        >
+          {barMsg}
+        </Alert>
+      </Snackbar>
     </div>
   );
 }

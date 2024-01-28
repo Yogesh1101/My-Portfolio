@@ -9,8 +9,8 @@ import TimelineDot from "@mui/lab/TimelineDot";
 
 function Education() {
   return (
-    <section id="education">
-      <div className="container d-flex flex-column align-items-center py-2 py-md-4">
+    <section id="education" className="bg-black">
+      <div className="container d-flex flex-column align-items-center py-2 py-md-5">
         <Typography
           data-aos="fade-up"
           data-aos-dutaion="1000"
@@ -18,14 +18,15 @@ function Education() {
           sx={{
             fontSize: { xs: 20, sm: 25, md: 30, lg: 40 },
             fontWeight: "bold",
-            color: "black",
+            color: "white",
+            marginBottom: "15px",
           }}
         >
           Education / Courses
         </Typography>
         <Timeline
           position="alternate-reverse"
-          className="w-100 text-black py-5"
+          className="w-100 text-black"
         >
           <TimelineItem>
             <TimelineSeparator>
@@ -37,7 +38,10 @@ function Education() {
                 data-aos="fade-up"
                 data-aos-dutaion="1000"
                 data-aos-delay="250"
-                sx={{ fontSize: { xs: 8, sm: 15, md: 17.5, lg: 20 } }}
+                sx={{
+                  fontSize: { xs: 8, sm: 15, md: 17.5, lg: 20 },
+                  color: "white",
+                }}
               >
                 <div className="fw-bold">Full Stack Development Program</div>
                 <div>Jun 2023 - Oct 2023</div>
@@ -55,7 +59,10 @@ function Education() {
                 data-aos="fade-up"
                 data-aos-dutaion="1000"
                 data-aos-delay="300"
-                sx={{ fontSize: { xs: 8, sm: 15, md: 17.5, lg: 20 } }}
+                sx={{
+                  fontSize: { xs: 8, sm: 15, md: 17.5, lg: 20 },
+                  color: "white",
+                }}
               >
                 <div className="fw-bold">
                   Electronics and Communication Engineering
@@ -76,7 +83,10 @@ function Education() {
                 data-aos="fade-up"
                 data-aos-dutaion="1000"
                 data-aos-delay="350"
-                sx={{ fontSize: { xs: 8, sm: 15, md: 17.5, lg: 20 } }}
+                sx={{
+                  fontSize: { xs: 8, sm: 15, md: 17.5, lg: 20 },
+                  color: "white",
+                }}
               >
                 <div className="fw-bold">HSC</div>
                 <div>V.H.N. Higher Secondary School</div>
@@ -94,7 +104,10 @@ function Education() {
                 data-aos="fade-up"
                 data-aos-dutaion="1000"
                 data-aos-delay="400"
-                sx={{ fontSize: { xs: 8, sm: 15, md: 17.5, lg: 20 } }}
+                sx={{
+                  fontSize: { xs: 8, sm: 15, md: 17.5, lg: 20 },
+                  color: "white",
+                }}
               >
                 <div className="fw-bold">SSLC</div>
                 <div>Sivakasi Nadar Matriculation Higher Secondary School</div>

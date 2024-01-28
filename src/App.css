@@ -17,12 +17,10 @@ Typography {
 }
 #skills,
 #projects,
+#certificates,
 #contact {
   background-color: #fcf6f5 !important;
   padding: 100px 0;
-}
-#education {
-  background-color: #fcf6f5 !important;
 }
 .about-heading-underline,
 .skills-heading-underline,
@@ -203,6 +201,25 @@ nav ul li a:hover {
 }
 .project-filter button.active {
   color: red;
+}
+
+/* CERTIFICATE SECTION */
+
+.swiper {
+  width: 75%;
+  padding: 50px 0;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
 
 /* CONTACT SECTION */
