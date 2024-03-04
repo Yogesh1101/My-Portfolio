@@ -494,10 +494,10 @@ function App() {
                 marginTop: { sm: "10px", md: "15px", lg: "20px" },
               }}
             >
-              I hold a Bachelor's degree in Electronics and Communcation
+              I hold a Bachelor's degree in Electronics and Communication
               Engineering (ECE) from K.L.N. College of Engineering, Madurai,
               TamilNadu, which I completed in 2023. My Interest on coding and
-              computing led me to start my carrer in the world of web
+              computing led me to start my career in the world of web
               development. I have recently completed an Full Stack Development
               Program in MERN Stack at GUVI Institute.
             </Typography>

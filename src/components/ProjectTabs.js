@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Capstone from "../assets/projects/capstone.png";
+import IMDBClone from "../assets/projects/imdb-clone.png";
 import SVI from "../assets/projects/svi.png";
 import Todo from "../assets/projects/todo-app.png";
 import URLReset from "../assets/projects/url-password-reset.png";
@@ -30,6 +31,14 @@ const projectsList = [
   },
   {
     id: 1,
+    title: "IMDB Clone",
+    pic: <img className="project-pic" width={"100%"} src={IMDBClone} alt="imdbClone" />,
+    type: ["all", "fsd"],
+    netlify: "https://imdb-clone-iofactory-task.netlify.app/",
+    github: "https://github.com/Yogesh1101/IMDB-Clone-Frontend.git",
+  },
+  {
+    id: 2,
     title: "SVI Website",
     pic: <img className="project-pic" width={"100%"} src={SVI} alt="svi" />,
     type: ["all", "react"],
@@ -37,7 +46,7 @@ const projectsList = [
     github: "https://github.com/Yogesh1101/SVI-Website.git",
   },
   {
-    id: 2,
+    id: 3,
     title: "TODO APP",
     pic: <img className="project-pic" width={"100%"} src={Todo} alt="todo" />,
     type: ["all", "fsd"],
@@ -45,7 +54,7 @@ const projectsList = [
     github: "https://github.com/Yogesh1101/TodoApp-Forntend.git",
   },
   {
-    id: 3,
+    id: 4,
     title: "URL Shortend & Reset Password",
     pic: (
       <img
@@ -60,7 +69,7 @@ const projectsList = [
     github: "https://github.com/Yogesh1101/url-shortener-frontend.git",
   },
   {
-    id: 4,
+    id: 5,
     title: "Shopping Cart using Redux",
     pic: (
       <img
@@ -75,7 +84,7 @@ const projectsList = [
     github: "https://github.com/Yogesh1101/FSD-Day32-React-Redux-Task.git",
   },
   {
-    id: 5,
+    id: 6,
     title: "Book Management using Formik",
     pic: <img className="project-pic" width={"100%"} src={Book} alt="book" />,
     type: ["all", "react"],
@@ -83,7 +92,7 @@ const projectsList = [
     github: "https://github.com/Yogesh1101/FSD-Day31-React-Formik-Task.git",
   },
   {
-    id: 6,
+    id: 7,
     title: "GUVI Course using Router",
     pic: (
       <img
@@ -98,7 +107,7 @@ const projectsList = [
     github: "https://github.com/Yogesh1101/FSD-Day26-React-Router-Task.git",
   },
   {
-    id: 7,
+    id: 8,
     title: "Rest Country API",
     pic: (
       <img
@@ -113,7 +122,7 @@ const projectsList = [
     github: "https://github.com/Yogesh1101/Rest-API-Country-Info.git",
   },
   {
-    id: 8,
+    id: 9,
     title: "Calculator",
     pic: (
       <img

@@ -39,7 +39,7 @@ hr {
   height: 400px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   box-shadow: inset 0 0 0 9px rgba(8, 8, 12, 255);
   order: 1;
   justify-self: center;
